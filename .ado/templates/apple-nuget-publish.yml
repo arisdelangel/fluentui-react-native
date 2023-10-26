@@ -30,19 +30,13 @@ jobs:
 
       - template: setup-repo-min-build.yml
 
-      # We need a later version of ruby for cocoapods
-      - task: UseRubyVersion@0
-        inputs:
-          versionSpec: '>= 2.7'
-          addToPath: true
-
       # Clean Derived Data
       - script: |
           rm -rf $(Build.Repository.LocalPath)/DerivedData
         displayName: 'Clean DerivedData'
 
       - script: |
-          sudo gem install cocoapods
+          brew install cocoapods
         displayName: 'Install CocoaPods Environment'
 
       - bash: |
