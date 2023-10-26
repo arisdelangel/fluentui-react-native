@@ -8,7 +8,7 @@ jobs:
   - job: NuGetPublish
     displayName: Apple NuGet Publish
     pool:
-      vmImage: $(VmImageApple)
+      name: OE Mac Pool
       os: macOS
     variables:
       - name: BUILDSECMON_OPT_IN
