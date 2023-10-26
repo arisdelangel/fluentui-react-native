@@ -48,10 +48,10 @@ extends:
       eslint:
         configuration: 'recommended'
         parser: '@typescript-eslint/parser'
-        parserOptions: "sourceType:script\necmaVersion:2017"
-        customEnvironments: true,
-        environmentsBrowser: true,
-        environmentsEs6: true,
+        parserOptions: 'sourceType:script\necmaVersion:2017'
+        customEnvironments: true
+        environmentsBrowser: true
+        environmentsEs6: true
         environmentsNode: true
     stages:
       - stage: main
