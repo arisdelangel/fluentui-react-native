@@ -8,7 +8,8 @@ jobs:
   - job: NuGetPublish
     displayName: Apple NuGet Publish
     pool:
-      name: OE Mac Pool
+      name: Azure Pipelines
+      vmImage: internal-macos12
       os: macOS
     variables:
       - name: BUILDSECMON_OPT_IN
