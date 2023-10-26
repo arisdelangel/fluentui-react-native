@@ -8,7 +8,7 @@ jobs:
   - job: NuGetPublish
     displayName: Apple NuGet Publish
     pool:
-      name: AppleMonoRepoArm64
+      name: ApexInfra macOS
       os: macOS
     variables:
       - name: BUILDSECMON_OPT_IN
