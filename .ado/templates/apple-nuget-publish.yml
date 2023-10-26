@@ -8,7 +8,7 @@ jobs:
   - job: NuGetPublish
     displayName: Apple NuGet Publish
     pool:
-      name: OE Mac Pool
+      name: AppleMonoRepoArm64
       os: macOS
     variables:
       - name: BUILDSECMON_OPT_IN
@@ -29,12 +29,6 @@ jobs:
         persistCredentials: true
 
       - template: setup-repo-min-build.yml
-
-      # We need a later version of ruby for cocoapods
-      - task: UseRubyVersion@0
-        inputs:
-          versionSpec: '>= 2.7'
-          addToPath: true
 
       # Clean Derived Data
       - script: |
