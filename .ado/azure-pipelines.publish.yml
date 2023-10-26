@@ -44,6 +44,15 @@ extends:
       name: Azure-Pipelines-1ESPT-ExDShared
       image: windows-latest
       os: windows
+    sdl:
+      eslint:
+        configuration: 'recommended'
+        parser: '@typescript-eslint/parser'
+        parserOptions: "sourceType:script\necmaVersion:2017"
+        customEnvironments: true,
+        environmentsBrowser: true,
+        environmentsEs6: true,
+        environmentsNode: true
     stages:
       - stage: main
         jobs:
