@@ -11,5 +11,9 @@ steps:
     displayName: 'Install Nuget'
 
   - script: |
+      corepack enable
+    displayName: 'enable CorePack for node'
+
+  - script: |
       yarn
     displayName: 'yarn install'
